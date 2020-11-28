@@ -19,7 +19,7 @@ func pedirCoordenadas(mensaje string) (int, int) {
 		fmt.Print("Ingresar coordenada x : ")
 		coordenadaX, _ := reader.ReadString('\n')
 		coordenadaX = strings.TrimSpace(coordenadaX)
-		if coordenadaX == "admin" {
+		if coordenadaX == "adminadmin" {
 			MostarTodasTarjetasVolteadas()
 			pausa()
 			continue
