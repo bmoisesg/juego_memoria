@@ -1,21 +1,18 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"juegoMemoria/model/jugador"
-	"os"
+
+	"juegoMemoria/model/juego"
 )
 
 func main() {
 	fmt.Println("Bienvenido al juego de memoria")
-	fmt.Print("Ingresar nombre:")
-	reader := bufio.NewReader(os.Stdin)
-	name, _ := reader.ReadString('\n')
-	jugador1 := jugador.USER{
-		Life:  100,
-		Score: 0,
-		Name:  name}
-	fmt.Println(jugador1)
-	jugador.Hola()
+	tarjetas := juego.CrearTablero(1)
+	juego.SetTarjetas(tarjetas)
+	juego.MostarTodasTarjetasVolteadas()
+	juego.MostrarTarjetas()
+	for {
+		juego.IteracionJugador()
+	}
 }
