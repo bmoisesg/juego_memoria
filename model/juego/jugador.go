@@ -19,6 +19,11 @@ func pedirCoordenadas(mensaje string) (int, int) {
 		fmt.Print("Ingresar coordenada x : ")
 		coordenadaX, _ := reader.ReadString('\n')
 		coordenadaX = strings.TrimSpace(coordenadaX)
+		if coordenadaX == "admin" {
+			MostarTodasTarjetasVolteadas()
+			pausa()
+			continue
+		}
 		//verificarEntrada(coordenadaX)
 		fmt.Print("Ingresar coordenada y : ")
 		coordenadaY, _ := reader.ReadString('\n')
@@ -28,7 +33,8 @@ func pedirCoordenadas(mensaje string) (int, int) {
 		//fmt.Println(error1)
 		//fmt.Println(error2)
 		if error1 == nil && error2 == nil {
-			if x < 6 && y < columnas {
+			//fmt.Println("->", y, columnas)
+			if x < 6 && y < filas {
 				if estadoTarjetaDelete(x, y) == 0 {
 					voltearTarjeta(x, y)
 					MostrarTarjetas()
@@ -40,13 +46,14 @@ func pedirCoordenadas(mensaje string) (int, int) {
 				}
 			}
 		}
+		fmt.Println()
 		fmt.Println("Error: coordenadas no validas, ingresar nuevamente...")
 		pausa()
 		MostrarTarjetas()
 	}
 }
 
-func IteracionJugador() {
+func IteracionJugador() bool {
 	tarjeta1_x, tarjeta1_y := pedirCoordenadas("Primera")
 	tarjeta2_x, tarjeta2_y := pedirCoordenadas("Segunda")
 
@@ -59,5 +66,17 @@ func IteracionJugador() {
 	} else {
 		revisarTarjetasLevantadas()
 	}
+	//revisar que todas las tarjetas esten eliminadas
+	return verificarTarjetas()
 
+}
+
+func verificarTarjetas() bool {
+	for i := 0; i < len(arrayTarjetas); i++ {
+		if arrayTarjetas[i].Delete == 0 {
+			return false
+		}
+	}
+	mensaje_you_win()
+	return true
 }

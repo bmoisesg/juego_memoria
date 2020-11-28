@@ -55,3 +55,54 @@ func mensaje_no_son_pareja() {
 	fmt.Println("                                    |_|                |__/        ")
 	pausa()
 }
+
+func Mensaje_bienvenidas() {
+	fmt.Println("                   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+	fmt.Println("                   ░                                                            ░")
+	fmt.Println("                   ░                                                            ░")
+	fmt.Println("                   ░               _                                            ░")
+	fmt.Println("                   ░              | |_   _  ___  __ _  ___                      ░")
+	fmt.Println("                   ░           _  | | | | |/ _ \\/ _` |/ _ \\                     ░")
+	fmt.Println("                   ░          | |_| | |_| |  __/ (_| | (_) |                    ░")
+	fmt.Println("                   ░           \\___/ \\__,_|\\___|\\__, |\\___/                     ░")
+	fmt.Println("                   ░           __  __           |___/           _               ░")
+	fmt.Println("                   ░          |  \\/  | ___ _ __ ___   ___  _ __(_) __ _         ░")
+	fmt.Println("                   ░          | |\\/| |/ _ \\ '_ ` _ \\ / _ \\| '__| |/ _` |        ░")
+	fmt.Println("                   ░          | |  | |  __/ | | | | | (_) | |  | | (_| |        ░")
+	fmt.Println("                   ░          |_|  |_|\\___|_| |_| |_|\\___/|_|  |_|\\__,_|        ░")
+	fmt.Println("                   ░                                                            ░")
+	fmt.Println("                   ░                                                            ░")
+	fmt.Println("                   ░            Opciones:                                       ░")
+	fmt.Println("                   ░                    1. Jugar                                ░")
+	fmt.Println("                   ░                    2. Acerca de ...                        ░")
+	fmt.Println("                   ░                    3. Salir                                ░")
+	fmt.Println("                   ░                                                            ░")
+	fmt.Println("                   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+}
+
+func Mensaje_seleccionar_nivel() {
+	fmt.Println("                ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+	fmt.Println("                ░                                       ░")
+	fmt.Println("                ░      Seleccione Nivel:                ░")
+	fmt.Println("                ░                                       ░")
+	fmt.Println("                ░                 1. Facil              ░")
+	fmt.Println("                ░                 2. Medio              ░")
+	fmt.Println("                ░                 3. Dificil            ░")
+	fmt.Println("                ░                                       ░")
+	fmt.Println("                ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+}
+func Mensaje_Acerda_de() {
+	fmt.Println("                ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+	fmt.Println("                ░                                       ░")
+	fmt.Println("                ░   Desarrollador:                      ░")
+	fmt.Println("                ░                                       ░")
+	fmt.Println("                ░         Moises Gonzalez Fuentes       ░")
+	fmt.Println("                ░         bmoisesg@gmail.com            ░")
+	fmt.Println("                ░         1.0.0 Nov 20202               ░")
+	fmt.Println("                ░                                       ░")
+	fmt.Println("                ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+	pausa()
+}
+func Saltos() {
+
+}

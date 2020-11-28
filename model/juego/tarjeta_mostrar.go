@@ -6,6 +6,10 @@ import (
 )
 
 func MostrarTarjetas() {
+	for i := 0; i < 30; i++ {
+		fmt.Println()
+	}
+
 	fmt.Println(printMargen() + "y\\x 0    1    2    3    4    5    ")
 	y := 0
 	for j := 0; j < len(arrayTarjetas); j = j + 6 {
@@ -16,9 +20,13 @@ func MostrarTarjetas() {
 			if tarjeta.Delete == 1 {
 				fmt.Print("║   ║")
 			} else if tarjeta.Mostrar == 1 {
-				fmt.Print("║ " + strconv.Itoa(tarjeta.Number) + " ║")
+				if tarjeta.Number < 10 {
+					fmt.Print("║ " + strconv.Itoa(tarjeta.Number) + " ║")
+				} else {
+					fmt.Print("║ " + strconv.Itoa(tarjeta.Number) + "║")
+				}
 			} else {
-				fmt.Print("║ . ║")
+				fmt.Print("║ ░ ║")
 			}
 		}
 		fmt.Println()
